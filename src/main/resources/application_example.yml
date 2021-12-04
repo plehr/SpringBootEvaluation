@@ -1,0 +1,15 @@
+server: 
+  port: 1337
+spring: 
+  datasource:
+    driverClassName: org.postgresql.Driver
+    hikari: 
+      connection-timeout: 20000
+      maximum-pool-size: 5
+    password: ${dbpass}
+    url: "jdbc:postgresql://localhost:5432/${dbname}"
+    username: ${dbuser}
+  jpa:
+    database: ${dbname}
+    hibernate:
+      ddl-auto: update
